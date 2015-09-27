@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../style/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        /*.container {*/
+            /*width:100%;*/
+            /*min-width:1000px;*/
+            /*width:expression_r(document.body.clientWidth < 1000 ? "1000px": "auto" );*/
+        /*}*/
+        @media (min-width: 300px) {
+            .container {
+                width: 100%;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+        <div class="col-xs-12 col-md-8" style="height: 200px; background: green;">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4" style="height: 200px; background: blue;">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+        <div class="col-xs-6 col-md-4" style="height: 200px; background: green;">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4" style="height: 200px; background: blue;">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4" style="height: 200px; background: red;">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+        <div class="col-xs-6" style="height: 200px; background: green;">.col-xs-6</div>
+        <div class="col-xs-6" style="height: 200px; background: blue;">.col-xs-6</div>
+    </div>
+</div>
+</body>
+</html>

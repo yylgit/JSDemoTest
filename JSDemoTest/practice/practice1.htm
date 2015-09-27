@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+ <!--   <script language="javascript">
+        function block(oEvent) {
+            if (window.event)
+                oEvent = window.event;
+            if (oEvent.button == 2)
+                alert("鼠标右键不可用");
+        }
+        document.onmousedown = block;
+</script>-->
+<!--<script language="javascript">
+    function block(oEvent) {
+        if (window.event) {
+            oEvent = window.event;
+            oEvent.returnValue = false; //取消默认事件 支持IE
+        } else
+            oEvent.preventDefault(); //取消默认事件 支持Firefox
+    }
+    document.oncontextmenu = block;
+</script>-->
+<!--<script type="text/javascript">
+    function getByteLength(s) {
+        if (s == ""||s==null) {
+            return 0;
+        }
+        var slen = s.length;
+        var oresult = slen;
+        for (var i = 0; i < slen; i++) {
+            if (s.charCodeAt(i) > 255) {
+                oresult++;
+            }
+        }
+        return oresult;
+
+    }
+
+    alert(getByteLength());
+</script>
+-->
+
+<script>
+//取出数组中的重复元素
+    function unique(data) {
+        debugger;
+        data = data || [];
+        var a = {};
+        for (var i = 0; i < data.length; i++) {
+            var v = data[i];
+            if (typeof (a[v]) == 'undefined') {
+                a[v] = 1;
+            }
+        };
+        data.length = 0;
+        console.info(a);
+        for (var i in a) {
+            console.info(i);
+            data[data.length] = i;
+        }
+        return data;
+    }
+    function test() {
+        var arr = [9, 1, 3, 8, 7, 7, 6, 6, 5, 7, 8, 8, 7, 4, 3, 1];
+        var arr1 = unique(arr);
+        alert(arr1.join(","));
+    }
+    //test();
+
+
+    var a = ["a", "b", "c"];
+    for (var el in a) {
+        console.info(el);
+        alert(a[el]);
+    }  
+</script> 
+
+</head>
+<body>
+
+</body>
+</html>

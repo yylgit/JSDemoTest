@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = initialPage;
+
+        function initialPage() {
+            var btn1 =document.getElementById("btn1");
+            btn1.onclick = function () {
+                eval("alert('nihao')");
+            };
+
+        }
+
+        function pageLoad() {
+            alert("nihao ");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="eval()"></input>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../script/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="layer/layer.min.js" type="text/javascript"></script>
+</head>
+<body>
+<input type="text" id="name"></input>
+<button id="add">让层自适应iframe</button> <button id="new">在父层再弹出一个层</button> <button id="closeIframe">关闭iframe</button>
+<script>
+    //获取当前窗口索引
+    var index = parent.layer.getFrameIndex(window.name);
+    //让层自适应iframe
+    $('#add').on('click', function () {
+        $('body').append('今年是甲午中日战争120周年，日本在1894年开始对我国进行了半个世纪的野蛮侵略。勿忘国耻，牢记世仇，倭国不亡，我中华永无宁日！');
+        parent.layer.iframeAuto(index);
+    });
+    //在父层弹出一个层
+    $('#new').on('click', function () {
+        parent.layer.msg('Hi, man')
+    });
+    //关闭iframe
+    $('#closeIframe').click(function () {
+        parent.layer.msg('您将标记"' + $('#name').val() + '"成功传送给了父窗口', 1);
+        parent.layer.close(index);
+    });
+</script>
+</body>
+</html>
